@@ -425,12 +425,10 @@ $(function () {
     $(document).ready(function () {
         const extractedParams = getQueryParts(window.location.href);
         //extract environment from URL
-        if (extractedParams.environment !== null) {
-            eddi.environment = 'unrestricted';
-        }
+        eddi.environment = 'unrestricted';
 
         //extract botId from URL
-        if (extractedParams.botId !== null) {
+        if (extractedParams.botId === null) {
             eddi.botId = '5c5f0f6146e0fb000a308ac8';
         }
 
